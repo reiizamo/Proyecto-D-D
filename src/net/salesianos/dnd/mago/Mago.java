@@ -9,6 +9,7 @@ public class Mago extends Personaje{
     }
 
     public void ataqueElemental(){
+        System.out.println(getNombre() + " ha lanzado un hechizo");
         energia = energia-25;
     }
 

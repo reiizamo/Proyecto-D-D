@@ -9,6 +9,7 @@ public class Guerrero extends Personaje{
     }
 
     public void ataquePesado(){
+        System.out.println(getNombre() +" ha atacado");
         energia = energia-15;
     }
 
