@@ -1,9 +1,9 @@
 package net.salesianos.dnd;
 
 public class Personaje {
-    String nombre;
-    int nivel;
-    int energia = 100;
+    private String nombre;
+    private int nivel;
+    protected int energia = 100;
 
     public Personaje(String nombre, int nivel){
         this.nombre = nombre;
@@ -28,5 +28,32 @@ public class Personaje {
     }
     public void setEnergia(int energia){
         this.energia = energia;
+    }
+
+    public void entrenar(int niveles){
+        if(niveles == 0){
+            System.out.println("No se puede entrenar 0 niveles.");
+            return;
+        }
+        this.nivel = this.nivel+niveles;
+    }
+    public void descansar(int energia){
+        if(energia == 0 || energia > 100){
+            System.out.println("No se puede aumentar la energía 0 veces ni a más de 100.");
+            return;
+        }
+        this.energia = this.energia+energia;
+        if (this.energia > 100){
+            this.energia = 100;
+        }
+    }
+    public void gastarEnergia(int energia){
+        this.energia = this.energia-energia;
+        if (this.energia < 0){
+            this.energia = 0;
+        }
+    }
+    public void mostrarInfo(){
+        System.out.println("Soy " + this.nombre + "\n" +"Nivel: " + this.nivel +"\n" + "Energía: " + this.energia);
     }
 }
