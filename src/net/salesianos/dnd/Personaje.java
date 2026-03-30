@@ -9,4 +9,24 @@ public class Personaje {
         this.nombre = nombre;
         this.nivel = nivel;
     }
+
+    public String getNombre(){
+        return this.nombre;
+    }
+    public int getNivel(){
+        return this.nivel;
+    }
+    public int getEnergia(){
+        return this.energia;
+    }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    public void setNivel(int nivel){
+        this.nivel = nivel;
+    }
+    public void setEnergia(int energia){
+        this.energia = energia;
+    }
 }
