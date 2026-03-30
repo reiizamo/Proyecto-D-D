@@ -21,6 +21,10 @@ public class App {
         lyra.mostrarInfo();
         Personaje.mostarTotalPersonajes();
 
+        Personaje[] reino = {viajero, thorak, lyra};
+        for (Personaje personaje : reino) {
+            personaje.mostrarInfo();
+        }
         
     }
 }
