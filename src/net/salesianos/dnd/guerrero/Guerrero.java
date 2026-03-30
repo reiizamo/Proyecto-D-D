@@ -7,5 +7,13 @@ public class Guerrero extends Personaje{
         super(nombre, nivel);
         this.arma = arma;
     }
-    
+
+    public void ataquePesado(){
+        energia = energia-15;
+    }
+
+    @Override
+    public void mostrarInfo(){
+        System.out.println("Soy " + getNombre() + "\n" +"Arma: "+  this.arma + "\n" + "Nivel: " + getNivel() +"\n" + "Energía: " + energia);
+    }
 }
