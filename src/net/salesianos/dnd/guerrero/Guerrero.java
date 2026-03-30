@@ -1,5 +1,11 @@
 package net.salesianos.dnd.guerrero;
+import net.salesianos.dnd.Personaje;
+public class Guerrero extends Personaje{
+    private String arma;
 
-public class Guerrero {
+    public Guerrero(String nombre, int nivel, String arma){
+        super(nombre, nivel);
+        this.arma = arma;
+    }
     
 }
