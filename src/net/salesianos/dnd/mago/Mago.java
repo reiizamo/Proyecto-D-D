@@ -8,5 +8,12 @@ public class Mago extends Personaje{
         this.elemento = elemento;
     }
 
-    
+    public void ataqueElemental(){
+        energia = energia-25;
+    }
+
+    @Override
+    public void mostrarInfo(){
+        System.out.println("Nivel: " + getNivel() +"\n" + "Elemento: " + this.elemento);
+    }
 }
