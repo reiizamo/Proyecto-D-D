@@ -14,5 +14,13 @@ public class App {
         thorak.descansar(10);
         thorak.mostrarInfo();
         Personaje.mostarTotalPersonajes();
+
+        Mago lyra = new Mago("Lyra", 4, "Hielo");
+        lyra.ataqueElemental();
+        lyra.entrenar(2);
+        lyra.mostrarInfo();
+        Personaje.mostarTotalPersonajes();
+
+        
     }
 }
