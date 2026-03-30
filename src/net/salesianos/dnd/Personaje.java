@@ -4,10 +4,12 @@ public class Personaje {
     private String nombre;
     private int nivel;
     protected int energia = 100;
+    static private int totalPersonajes = 0;
 
     public Personaje(String nombre, int nivel){
         this.nombre = nombre;
         this.nivel = nivel;
+        totalPersonajes++;
     }
 
     public String getNombre(){
@@ -55,5 +57,8 @@ public class Personaje {
     }
     public void mostrarInfo(){
         System.out.println("Soy " + this.nombre + "\n" +"Nivel: " + this.nivel +"\n" + "Energía: " + this.energia);
+    }
+    public static void mostarTotalPersonajes(){
+        System.out.println("Hay " + totalPersonajes + " personajes creados.");
     }
 }
